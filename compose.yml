@@ -1,0 +1,16 @@
+version: "3.8"
+
+services:
+ 
+# STREAMLIT
+  streamlit:
+    build:
+      context: .
+    volumes:
+      - ./app:/app
+    tty: true
+    ports:
+      # HTTP
+      - target: 8501
+        published: 8501
+        protocol: tcp
